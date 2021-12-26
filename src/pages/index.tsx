@@ -16,15 +16,22 @@ import SectionReviews from 'components/SectionReviews'
 import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
 import JsonSchema from 'components/JsonSchema'
-import { landingPageProps } from 'types/api'
+import { LandingPageProps } from 'types/api'
 
-const Index = ({ logo, header, sectionAboutProject }: landingPageProps) => (
+const Index = ({
+  logo,
+  header,
+  sectionAboutProject,
+  sectionTech,
+  sectionConcepts,
+  sectionModules
+}: LandingPageProps) => (
   <>
     <SectionHero logo={logo} header={header} />
     <SectionAboutProject {...sectionAboutProject} />
-    <SectionTech />
-    <SectionConcepts />
-    <SectionModules />
+    <SectionTech {...sectionTech} />
+    <SectionConcepts {...sectionConcepts} />
+    <SectionModules {...sectionModules} />
     <SectionAgenda />
     <PricingBox />
     <SectionAboutUs />
